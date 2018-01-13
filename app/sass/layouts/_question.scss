@@ -1,0 +1,18 @@
+.question-container {
+  padding: 3em;
+
+  p {
+    font-size: 1.75em;
+    margin-bottom: 1em;
+
+    &#answer {
+      opacity: 0;
+    }
+
+  }
+
+  #question-hint {
+    opacity: 0;
+  }
+  
+}

@@ -9,6 +9,20 @@ html {
 
 body {
   font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
   // use below syntax for svg
   // background-image: svg("svg-name", "[fill]: #cccccc");
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0 0 0.25em 0;
+}
+
+h2 {
+  font-size: 2em;
+  color: #505050;
+  margin: 0 0 1em 0;
 }
