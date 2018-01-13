@@ -21,7 +21,32 @@
     <body>
 
         <!-- Add your site or application content here -->
-        <p>Hello world!</p>
+        <header>
+          <h1>Just Trivia</h1>
+          <h2>No bullshit</h2>
+          <p>Filter categories with the buttons below and click the "show" button to reveal the answer.</p>
+        </header>
+
+        <main>
+          <div class="categories"></div>
+          <div class="question-container">
+            <dl class="question-info">
+              <dt>Category:</dt>
+              <dl id="question-category"></dl>
+              <dt>Difficulty:</dt>
+              <dl id="question-difficulty"></dl>
+              <dt>Hint:</dt>
+              <dl id="question-hint"></dl>
+            </dl>
+            <p id="question"></p>
+            <p id="answer"></p>
+            <button id="show-answer">Show Answer</button>
+            <button id="hint">Hint</button>
+            <button id="new-question">New Question</button>
+          </div>
+        </main>
+
+        <footer>&copy 2018 Patrick Roberts</footer>
 
         <!--build:js js/jquery.min.js -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
