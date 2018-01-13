@@ -1,0 +1,22 @@
+{
+  "name": "just-trivia",
+  "version": "1.0.0",
+  "authors": [
+    "Patrick Roberts <patrickroberts93@gmail.com>"
+  ],
+  "description": "A simple trivia website made using the opentdb.com API",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize-scss": "~3.0.3"
+  },
+  "devDependencies": {}
+}
