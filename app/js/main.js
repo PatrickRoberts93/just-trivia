@@ -11,7 +11,10 @@ $( document ).ready(function() {
 
   // GENERATE A HINT FOR THE ANSWER
   function generateHint(answer) {
-
+    // if (isNan(answer.charAt(0)) {
+    //   console.log()
+    // }
+    // console.log(typeof answer.charAt(0));
   }
 
   ////////////////////// GETS AND INSERTS A NEW QUESTION //////////////////////
@@ -44,15 +47,23 @@ $( document ).ready(function() {
       var difficulty = data.results[0].difficulty;
       var hint = generateHint(answer);
 
-      if (toString(answer).includes("True" || "False" || "of the following" || "of these")) {
-        console.log("TRUE OR FALSE QUESTION SKIPPED");
+      if(question.indexOf("of the following" || "of these") != -1){
+        console.log("TRUE OR FALSE QUESTION SKIPPED - DETECTED KEYWORD IN QUESTION ('of the following' or 'of these')");
         newQuestion();
       }
+
+      else if(answer.indexOf("True" || "False") != -1){
+        console.log("TRUE OR FALSE QUESTION SKIPPED - DETECTED KEYWORD IN ANSWER ('True' or 'False')");
+        newQuestion();
+      }
+
       else {
         $('#question').html(question).css('color',"#000");;
         $('#answer').html(answer);
         $('#question-category').html(category);
         $('#question-difficulty').html(difficulty);
+        $('#question-hint').html(hint);
+
       }
     }});
 
