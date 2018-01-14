@@ -13,6 +13,10 @@
     &#answer {
       opacity: 0;
       color: $success-color;
+
+      &::first-line {
+        line-height: 3.214285714em;
+      }
     }
 
   }
@@ -53,7 +57,7 @@
 
 .question-controllers {
   width: 40%;
-  float: left;
+  float: right;
 
   & button {
     background: lighten($highlight-color, 10%);
@@ -62,5 +66,28 @@
     width: 200px;
     display: block;
     margin: 0 auto 1em auto;
+  }
+}
+
+
+
+
+@include breakpoint(tiny) {
+  .question-container {
+    padding: 1.2em;
+
+    & p {
+      font-size: 1.2em;
+    }
+  }
+
+  .question-info {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  .question-controllers {
+    width: 100%;
+    margin: 1em 0;
   }
 }

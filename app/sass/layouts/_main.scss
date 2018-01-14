@@ -4,3 +4,9 @@ main {
   padding: 3em;
   margin: 0 auto;
 }
+
+@include breakpoint(tiny) {
+  main {
+    padding: 0;
+  }
+}

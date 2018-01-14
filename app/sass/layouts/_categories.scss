@@ -1,10 +1,60 @@
 .categories {
-  display: flex;
-  flex-wrap: wrap;
+
   border: 1px solid #DDD;
 
-  & button.category {
-    flex: 1;
+  h3 {
+    display: none;
+  }
+
+  .filters-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    button.category {
+      flex: 1;
+    }
+
   }
 
 }
+
+
+@include breakpoint(tiny) {
+  .categories {
+
+    h3 {
+      text-align: center;
+      display: block;
+      width: 100%;
+      font-size: 1.5em;
+      padding: 0.75em;
+      text-transform: uppercase;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background-image: url('/images/chevron.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-40%);
+        transition: all 200ms;
+
+      }
+
+      &.open::after {
+        transform: translateY(-40%) rotate(180deg);
+      }
+    }
+
+    .filters {
+      display: none;
+    }
+
+  }
+
+};

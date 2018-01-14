@@ -29,10 +29,20 @@
         </header>
 
         <main>
-          <div class="categories"></div>
+          <div class="categories">
+            <h3>Categories</h3>
+            <div class="filters">
+              <div class="filters-inner"></div>
+            </div>
+          </div>
           <div class="question-container">
             <p id="question"></p>
             <p id="answer"></p>
+            <div class="question-controllers">
+              <button id="hint">Hint</button>
+              <button id="show-answer">Show Answer</button>
+              <button id="new-question">New Question</button>
+            </div>
             <dl class="question-info">
               <dt>Category:</dt>
               <dd id="question-category"></dd>
@@ -41,11 +51,6 @@
               <dt>Hint:</dt>
               <dd id="question-hint"></dd>
             </dl>
-            <div class="question-controllers">
-              <button id="hint">Hint</button>
-              <button id="show-answer">Show Answer</button>
-              <button id="new-question">New Question</button>
-            </div>
           </div>
         </main>
 
