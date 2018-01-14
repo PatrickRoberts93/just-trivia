@@ -1,6 +1,8 @@
 .question-container {
+
+  @extend %clearfix;
   padding: 3em;
-  max-width: $site-width;
+  max-width: $site-width * 0.75;
   margin: 0 auto;
   text-align: center;
 
@@ -11,12 +13,49 @@
     &#answer {
       opacity: 0;
       color: $success-color;
+      margin-bottom: 2em;
     }
 
+  }
+
+}
+
+.question-info {
+
+  @extend %clearfix;
+  width: 50%;
+  float: left;
+
+  dt, dd {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  dt {
+    width: 30%;
+    float: left;
+  }
+
+  dd {
+    width: 70%;
+    float: left;
+    text-align: left;
+    padding-left: 5px;
   }
 
   #question-hint {
     opacity: 0;
   }
 
+}
+
+.question-controllers {
+  width: 50%;
+  float: left;
+
+  & button {
+    width: 200px;
+    display: block;
+    margin: 0 auto 1em auto;
+  }
 }
