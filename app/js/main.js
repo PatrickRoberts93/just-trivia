@@ -12,10 +12,18 @@ $( document ).ready(function() {
 
   // GENERATE A HINT FOR THE ANSWER
   function generateHint(answer) {
-    // if (isNan(answer.charAt(0)) {
-    //   console.log()
-    // }
-    // console.log(typeof answer.charAt(0));
+
+    let hint;
+
+    if (isNaN(answer.charAt(0))) {
+      hint = "The first letter of the answer is "+answer.charAt(0)+".";
+    }
+    else {
+      hint = "Sorry, no hint for this question yet. I'll get around to it."
+    }
+
+    return hint;
+
   }
 
   ////////////////////// GETS AND INSERTS A NEW QUESTION //////////////////////
@@ -50,8 +58,8 @@ $( document ).ready(function() {
       var difficulty = data.results[0].difficulty;
       var hint = generateHint(answer);
 
-      if(question.indexOf("of the following") != -1 || question.indexOf("of these") != -1){
-        console.log("MULTIPLE CHOICE QUESTION SKIPPED - DETECTED KEYWORD IN QUESTION ('of the following' or 'of these')");
+      if(question.indexOf("of the following") != -1 || question.indexOf("of these") != -1 || question.indexOf("is not") != -1){
+        console.log("MULTIPLE CHOICE QUESTION SKIPPED - DETECTED KEYWORD IN QUESTION ('of the following', 'of these' or 'is not')");
         newQuestion();
       }
 
