@@ -41,18 +41,20 @@ $( document ).ready(function() {
 
     $.ajax({url: "https://opentdb.com/api.php?amount=1"+category+"&type=multiple", success: function(data){
 
+      console.log(data);
+
       var answer = data.results[0].correct_answer;
       var question = data.results[0].question;
       var category = data.results[0].category;
       var difficulty = data.results[0].difficulty;
       var hint = generateHint(answer);
 
-      if(question.indexOf("of the following" || "of these") != -1){
-        console.log("TRUE OR FALSE QUESTION SKIPPED - DETECTED KEYWORD IN QUESTION ('of the following' or 'of these')");
+      if(question.indexOf("of the following") != -1 || question.indexOf("of these") != -1){
+        console.log("MULTIPLE CHOICE QUESTION SKIPPED - DETECTED KEYWORD IN QUESTION ('of the following' or 'of these')");
         newQuestion();
       }
 
-      else if(answer.indexOf("True" || "False") != -1){
+      else if(answer.indexOf("True") != -1 || question.indexOf("False") != -1){
         console.log("TRUE OR FALSE QUESTION SKIPPED - DETECTED KEYWORD IN ANSWER ('True' or 'False')");
         newQuestion();
       }
