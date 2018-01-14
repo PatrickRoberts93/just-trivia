@@ -9,6 +9,7 @@
   p {
     font-size: 1.75em;
     min-height: 3.214285714em;
+    line-height: 1.2;
 
     &#answer {
       opacity: 0;
@@ -71,6 +72,13 @@
 
 
 
+@include breakpoint(small) {
+  .question-container {
+    #answer {
+      margin-bottom: 2em;
+    }
+  }
+}
 
 @include breakpoint(tiny) {
   .question-container {
@@ -88,6 +96,6 @@
 
   .question-controllers {
     width: 100%;
-    margin: 1em 0;
+    margin: 2em 0;
   }
 }

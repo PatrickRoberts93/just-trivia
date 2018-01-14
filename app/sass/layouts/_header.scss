@@ -14,3 +14,15 @@ header {
   }
 
 }
+
+
+
+
+
+@include breakpoint(tiny) {
+  header {
+    h1 {
+      font-size: 5em;
+    }
+  }
+}
