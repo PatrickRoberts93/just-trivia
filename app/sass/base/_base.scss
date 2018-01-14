@@ -9,20 +9,24 @@ html {
 
 body {
   font-size: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+  font-family: $body-font;
+  background-color: #EEE;
   // use below syntax for svg
   // background-image: svg("svg-name", "[fill]: #cccccc");
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: $heading-font;
+}
+
 h1 {
-  font-size: 4em;
-  margin: 0 0 0.25em 0;
+  font-size: 7em;
+  margin: 0 0 0.4em 0;
+  color: #FFF;
 }
 
 h2 {
   font-size: 2em;
-  color: #505050;
+  color: #DDD;
   margin: 0 0 1em 0;
 }

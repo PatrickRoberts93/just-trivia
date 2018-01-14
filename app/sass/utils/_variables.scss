@@ -13,3 +13,13 @@ $breakpoints: (
   'large':  ( min-width: 1200px ),
   'custom': ( min-height:  40em )
 );
+
+$site-width: 1200px;
+
+$theme-color: #1FB58F;
+$highlight-color: #EAB126;
+$success-color: #24AA47;
+$fail-color: #F24C4E;
+
+$heading-font: 'Oswald', sans-serif;
+$body-font: 'Raleway', sans-serif;

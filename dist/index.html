@@ -19,7 +19,31 @@
     <body>
 
         <!-- Add your site or application content here -->
-        <p>Hello world!</p>
+        <header>
+          <h1>Just Trivia</h1>
+          <p>Choose your categories below and </p>
+        </header>
+
+        <main>
+          <div class="categories"></div>
+          <div class="question-container">
+            <p id="question"></p>
+            <p id="answer"></p>
+            <dl class="question-info">
+              <dt>Category:</dt>
+              <dl id="question-category"></dl>
+              <dt>Difficulty:</dt>
+              <dl id="question-difficulty"></dl>
+              <dt style="display: none;">Hint:</dt>
+              <dl id="question-hint"></dl>
+            </dl>
+            <button id="show-answer">Show Answer</button>
+            <button id="hint" style="display: none;">Hint</button>
+            <button id="new-question">New Question</button>
+          </div>
+        </main>
+
+        <footer>&copy 2018 Patrick Roberts</footer>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/main.min.js"></script>

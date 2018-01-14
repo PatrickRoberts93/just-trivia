@@ -15,6 +15,7 @@
 
         <!-- build:css css/styles.min.css -->
         <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600|Raleway" rel="stylesheet">
         <!-- endbuild -->
 
     </head>
@@ -23,25 +24,24 @@
         <!-- Add your site or application content here -->
         <header>
           <h1>Just Trivia</h1>
-          <h2>No bullshit</h2>
-          <p>Filter categories with the buttons below and click the "show" button to reveal the answer.</p>
+          <p>Choose your categories below and </p>
         </header>
 
         <main>
           <div class="categories"></div>
           <div class="question-container">
+            <p id="question"></p>
+            <p id="answer"></p>
             <dl class="question-info">
               <dt>Category:</dt>
               <dl id="question-category"></dl>
               <dt>Difficulty:</dt>
               <dl id="question-difficulty"></dl>
-              <dt>Hint:</dt>
+              <dt style="display: none;">Hint:</dt>
               <dl id="question-hint"></dl>
             </dl>
-            <p id="question"></p>
-            <p id="answer"></p>
             <button id="show-answer">Show Answer</button>
-            <button id="hint">Hint</button>
+            <button id="hint" style="display: none;">Hint</button>
             <button id="new-question">New Question</button>
           </div>
         </main>

@@ -6,19 +6,18 @@
 button {
 
   background-color: #F7F7F7;
-  border: 2px solid #A9A9A9;
-  border-radius: 10px;
-  padding: 1em 1.5em;
+  border: 1px solid #A9A9A9;
+  padding: 1em;
   transition: all 200ms;
 
   &.category {
     font-size: 0.75em;
-    margin: 0 .5em .5em;
+    white-space: nowrap;
 
     &.active {
       color: #FFF;
-      background-color: #FF3333;
-      border-color: #CC0000;
+      background-color: $success-color;
+      border-color: darken($success-color, 10%);
     }
 
   }
