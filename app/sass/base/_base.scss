@@ -4,13 +4,17 @@
 // ==========
 
 html {
-  font-size: 62.5%; // for proper use of px to rem mixin
+  font-size: 62.5%; // for proper use of px to rem mixin'
+  height: 100%;
 }
 
 body {
   font-size: 16px;
   font-family: $body-font;
   background-color: #EEE;
+  padding-bottom: 8.2rem;
+  min-height: 100%;
+  position: relative;
   // use below syntax for svg
   // background-image: svg("svg-name", "[fill]: #cccccc");
 }

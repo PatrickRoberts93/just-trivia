@@ -8,12 +8,11 @@
 
   p {
     font-size: 1.75em;
-    margin-bottom: 1em;
+    min-height: 3.214285714em;
 
     &#answer {
       opacity: 0;
       color: $success-color;
-      margin-bottom: 2em;
     }
 
   }
@@ -23,22 +22,25 @@
 .question-info {
 
   @extend %clearfix;
-  width: 50%;
+  width: 60%;
   float: left;
 
   dt, dd {
     font-size: 1.4em;
-    margin-bottom: 1em;
   }
 
   dt {
     width: 30%;
     float: left;
+    margin-bottom: 1em;
+    text-align: right;
+    padding-right: 0.75em;
   }
 
   dd {
     width: 70%;
     float: left;
+    min-height: 3.321428571em;
     text-align: left;
     padding-left: 5px;
   }
@@ -50,10 +52,13 @@
 }
 
 .question-controllers {
-  width: 50%;
+  width: 40%;
   float: left;
 
   & button {
+    background: lighten($highlight-color, 10%);
+    border-color: $highlight-color;
+    color: #FFF;
     width: 200px;
     display: block;
     margin: 0 auto 1em auto;
