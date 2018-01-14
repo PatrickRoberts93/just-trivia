@@ -97,7 +97,7 @@ gulp.task('useref', function() {
   return gulp.src(appConfig.src + '*.html')
     .pipe($.useref())
     // Uglifies only if it's a Javascript file
-    .pipe($.if('*.js', $.uglify()))
+    // .pipe($.if('*.js', $.uglify()))
     // Minifies only if it's a CSS file
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({
