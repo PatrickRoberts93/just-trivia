@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Just Trivia | Trivia Project Using OPENTDB.COM</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,8 @@
         <!-- Add your site or application content here -->
         <header>
           <h1>Just Trivia</h1>
-          <p>Choose your categories below and </p>
+          <h2>A simple trivia website made using the opentdb.com API.</h2>
+          <p>Select categories to filter the new question search. If you're stuck, try using a hint.</p>
         </header>
 
         <main>
@@ -31,19 +32,21 @@
             <p id="answer"></p>
             <dl class="question-info">
               <dt>Category:</dt>
-              <dl id="question-category"></dl>
+              <dd id="question-category"></dd>
               <dt>Difficulty:</dt>
-              <dl id="question-difficulty"></dl>
-              <dt style="display: none;">Hint:</dt>
-              <dl id="question-hint"></dl>
+              <dd id="question-difficulty"></dd>
+              <dt>Hint:</dt>
+              <dd id="question-hint"></dd>
             </dl>
-            <button id="show-answer">Show Answer</button>
-            <button id="hint" style="display: none;">Hint</button>
-            <button id="new-question">New Question</button>
+            <div class="question-controllers">
+              <button id="hint">Hint</button>
+              <button id="show-answer">Show Answer</button>
+              <button id="new-question">New Question</button>
+            </div>
           </div>
         </main>
 
-        <footer>&copy 2018 Patrick Roberts</footer>
+        <footer><span>&copy 2018 Patrick Roberts</span></footer>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/main.min.js"></script>
