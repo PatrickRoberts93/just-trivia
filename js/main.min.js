@@ -6,7 +6,7 @@ $( document ).ready(function() {
     console.log(categories)
     for (var i = 0; i < categories.length; i++) {
       let html = "<button class='category' data-categoryid='"+categories[i].id+"'>"+categories[i].name+"</button>";
-      $('.categories').append(html);
+      $('.filters-inner').append(html);
     }
   }});
 
@@ -99,6 +99,11 @@ $( document ).ready(function() {
 
   $('.question-container').on('click', '#hint', function() {
     $('#question-hint').css('opacity',1);
+  });
+
+  $('.categories').on('click', 'h3', function() {
+    $(this).toggleClass('open')
+    $('.filters').slideToggle();
   });
 
 });
